@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>扩散模型基本框架 | GenMo</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="Generate Motion">
+    
+    <link rel="preload" href="/genmo/assets/css/0.styles.84f978c2.css" as="style"><link rel="preload" href="/genmo/assets/js/app.26c693c1.js" as="script"><link rel="preload" href="/genmo/assets/js/2.778bb4ad.js" as="script"><link rel="preload" href="/genmo/assets/js/1.50b457b8.js" as="script"><link rel="preload" href="/genmo/assets/js/40.5f3de182.js" as="script"><link rel="prefetch" href="/genmo/assets/js/10.325b9f09.js"><link rel="prefetch" href="/genmo/assets/js/11.c62b6b34.js"><link rel="prefetch" href="/genmo/assets/js/12.ecdb524b.js"><link rel="prefetch" href="/genmo/assets/js/13.3f3f6a36.js"><link rel="prefetch" href="/genmo/assets/js/14.eb7a3d07.js"><link rel="prefetch" href="/genmo/assets/js/15.114dfd5c.js"><link rel="prefetch" href="/genmo/assets/js/16.85253907.js"><link rel="prefetch" href="/genmo/assets/js/17.c2838453.js"><link rel="prefetch" href="/genmo/assets/js/18.3256f17f.js"><link rel="prefetch" href="/genmo/assets/js/19.d8afd0ae.js"><link rel="prefetch" href="/genmo/assets/js/20.10e47ab9.js"><link rel="prefetch" href="/genmo/assets/js/21.33b300c9.js"><link rel="prefetch" href="/genmo/assets/js/22.325f97d5.js"><link rel="prefetch" href="/genmo/assets/js/23.a51c925e.js"><link rel="prefetch" href="/genmo/assets/js/24.22712080.js"><link rel="prefetch" href="/genmo/assets/js/25.e8554233.js"><link rel="prefetch" href="/genmo/assets/js/26.5859999a.js"><link rel="prefetch" href="/genmo/assets/js/27.64aaa112.js"><link rel="prefetch" href="/genmo/assets/js/28.74e53adc.js"><link rel="prefetch" href="/genmo/assets/js/29.55f636cd.js"><link rel="prefetch" href="/genmo/assets/js/3.af33e5d6.js"><link rel="prefetch" href="/genmo/assets/js/30.842ab42d.js"><link rel="prefetch" href="/genmo/assets/js/31.0badfc85.js"><link rel="prefetch" href="/genmo/assets/js/32.931dc4b4.js"><link rel="prefetch" href="/genmo/assets/js/33.f0ea27b3.js"><link rel="prefetch" href="/genmo/assets/js/34.3aa0c414.js"><link rel="prefetch" href="/genmo/assets/js/35.8dadf405.js"><link rel="prefetch" href="/genmo/assets/js/36.989f54d3.js"><link rel="prefetch" href="/genmo/assets/js/37.46cbd986.js"><link rel="prefetch" href="/genmo/assets/js/38.97296340.js"><link rel="prefetch" href="/genmo/assets/js/39.5962b011.js"><link rel="prefetch" href="/genmo/assets/js/4.45665f8a.js"><link rel="prefetch" href="/genmo/assets/js/41.d2a9613d.js"><link rel="prefetch" href="/genmo/assets/js/42.a698d78e.js"><link rel="prefetch" href="/genmo/assets/js/43.f6af9a36.js"><link rel="prefetch" href="/genmo/assets/js/44.74fed02e.js"><link rel="prefetch" href="/genmo/assets/js/45.39c81079.js"><link rel="prefetch" href="/genmo/assets/js/46.e41a75b4.js"><link rel="prefetch" href="/genmo/assets/js/47.e6fc9c03.js"><link rel="prefetch" href="/genmo/assets/js/48.8f6cc604.js"><link rel="prefetch" href="/genmo/assets/js/49.a5ad7ee5.js"><link rel="prefetch" href="/genmo/assets/js/5.7098d77a.js"><link rel="prefetch" href="/genmo/assets/js/50.1881828f.js"><link rel="prefetch" href="/genmo/assets/js/51.ce4cd92a.js"><link rel="prefetch" href="/genmo/assets/js/52.adcabbc6.js"><link rel="prefetch" href="/genmo/assets/js/53.f2f86279.js"><link rel="prefetch" href="/genmo/assets/js/54.36a50147.js"><link rel="prefetch" href="/genmo/assets/js/55.e094f2d2.js"><link rel="prefetch" href="/genmo/assets/js/56.bb877cbe.js"><link rel="prefetch" href="/genmo/assets/js/57.c54b788e.js"><link rel="prefetch" href="/genmo/assets/js/58.5ef6e07e.js"><link rel="prefetch" href="/genmo/assets/js/59.48f41fd9.js"><link rel="prefetch" href="/genmo/assets/js/6.0c0a0f39.js"><link rel="prefetch" href="/genmo/assets/js/60.4e7540b6.js"><link rel="prefetch" href="/genmo/assets/js/61.8f461756.js"><link rel="prefetch" href="/genmo/assets/js/62.6219f95f.js"><link rel="prefetch" href="/genmo/assets/js/63.0447b50c.js"><link rel="prefetch" href="/genmo/assets/js/64.72f54285.js"><link rel="prefetch" href="/genmo/assets/js/65.1a00a05f.js"><link rel="prefetch" href="/genmo/assets/js/66.c9a0a3cb.js"><link rel="prefetch" href="/genmo/assets/js/67.5a16509d.js"><link rel="prefetch" href="/genmo/assets/js/68.480a63ec.js"><link rel="prefetch" href="/genmo/assets/js/69.9e67f88e.js"><link rel="prefetch" href="/genmo/assets/js/7.6a854e57.js"><link rel="prefetch" href="/genmo/assets/js/70.b035d654.js"><link rel="prefetch" href="/genmo/assets/js/71.06314f6b.js"><link rel="prefetch" href="/genmo/assets/js/72.0d9dec58.js"><link rel="prefetch" href="/genmo/assets/js/73.732392b9.js"><link rel="prefetch" href="/genmo/assets/js/74.d4876ba2.js"><link rel="prefetch" href="/genmo/assets/js/75.79eb6294.js"><link rel="prefetch" href="/genmo/assets/js/76.6a0cf2e1.js"><link rel="prefetch" href="/genmo/assets/js/77.51d58148.js"><link rel="prefetch" href="/genmo/assets/js/78.90b53af6.js"><link rel="prefetch" href="/genmo/assets/js/79.b2c388b9.js"><link rel="prefetch" href="/genmo/assets/js/80.6652051c.js"><link rel="prefetch" href="/genmo/assets/js/81.e9a08b1d.js"><link rel="prefetch" href="/genmo/assets/js/82.ab554a28.js"><link rel="prefetch" href="/genmo/assets/js/83.d195d64f.js"><link rel="prefetch" href="/genmo/assets/js/84.640f2c5d.js"><link rel="prefetch" href="/genmo/assets/js/vendors~docsearch.5e19b665.js">
+    <link rel="stylesheet" href="/genmo/assets/css/0.styles.84f978c2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/genmo/" class="home-link router-link-active"><img src="/genmo/logo3.png" alt="GenMo" class="logo"> <span class="site-name can-hide">GenMo</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/genmo/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/genmo/guide.html" class="nav-link">
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="深入掌握深度生成技术" class="dropdown-title"><span class="title">AIGC学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="深入掌握深度生成技术" class="mobile-dropdown-title"><span class="title">AIGC学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/genmo/dm/" class="nav-link router-link-active">
+  扩散模型
+</a></li><li class="dropdown-item"><!----> <a href="/genmo/osp/" class="nav-link">
+  开源项目
+</a></li><li class="dropdown-item"><!----> <a href="/genmo/hf/" class="nav-link">
+  HF学习
+</a></li><li class="dropdown-item"><!----> <a href="/genmo/tvm/" class="nav-link">
+  TVM学习
+</a></li><li class="dropdown-item"><!----> <a href="/genmo/tinyml/" class="nav-link">
+  TinyML学习
+</a></li><li class="dropdown-item"><!----> <a href="/genmo/t2m/" class="nav-link">
+  动作生成学习
+</a></li><li class="dropdown-item"><!----> <a href="/genmo/bpy/" class="nav-link">
+  BPY学习
+</a></li></ul></div></div><div class="nav-item"><a href="/genmo/handon/" class="nav-link">
+  实战
+</a></div><div class="nav-item"><a href="/genmo/about.html" class="nav-link">
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/genmo/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/genmo/guide.html" class="nav-link">
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="深入掌握深度生成技术" class="dropdown-title"><span class="title">AIGC学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="深入掌握深度生成技术" class="mobile-dropdown-title"><span class="title">AIGC学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/genmo/dm/" class="nav-link router-link-active">
+  扩散模型
+</a></li><li class="dropdown-item"><!----> <a href="/genmo/osp/" class="nav-link">
+  开源项目
+</a></li><li class="dropdown-item"><!----> <a href="/genmo/hf/" class="nav-link">
+  HF学习
+</a></li><li class="dropdown-item"><!----> <a href="/genmo/tvm/" class="nav-link">
+  TVM学习
+</a></li><li class="dropdown-item"><!----> <a href="/genmo/tinyml/" class="nav-link">
+  TinyML学习
+</a></li><li class="dropdown-item"><!----> <a href="/genmo/t2m/" class="nav-link">
+  动作生成学习
+</a></li><li class="dropdown-item"><!----> <a href="/genmo/bpy/" class="nav-link">
+  BPY学习
+</a></li></ul></div></div><div class="nav-item"><a href="/genmo/handon/" class="nav-link">
+  实战
+</a></div><div class="nav-item"><a href="/genmo/about.html" class="nav-link">
+  关于
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/genmo/dm/" class="sidebar-heading clickable router-link-active open"><span>数理基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/genmo/dm/basic/1.html" class="sidebar-link">1.为什么是扩散模型？</a></li><li><a href="/genmo/dm/basic/2.html" class="sidebar-link">2.多视角剖析扩散模型</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>应用算法</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="扩散模型基本框架"><a href="#扩散模型基本框架" class="header-anchor">#</a> 扩散模型基本框架</h1> <blockquote><p>你眼中看似落叶纷飞变化无常的世界，实际只是躺在上帝怀中一份早已谱好的乐章。</p></blockquote> <p>扩散模型作为生成模型，从概念上是非常简单的。</p> <h2 id="什么是生成模型"><a href="#什么是生成模型" class="header-anchor">#</a> 什么是生成模型</h2> <p>我们先从一个简单的场景出发，来理解生成模型。
+大家在编程中都会涉及到随机数生成问题。关于随机数生成，我们一般都有如下的要求：</p> <ul><li>抽取出来的数据范围是[0,1]</li> <li>每次抽取的数据尽可能不一样</li></ul> <p>电脑中是如何实现这个功能的？下面我们介绍一下[0,1]之间的伪随机数生成办法。可能有助于大家理解生成模型<a href="https://www.icst.pku.edu.cn/zlian/docs/20181023154331943266.pdf" target="_blank" rel="noopener noreferrer">参考<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>:
+这篇文章重点解读一下，作为非常好的生成模型的例子。对于大家理解生成模型有帮助。</p> <h2 id="生成模型的物理模型"><a href="#生成模型的物理模型" class="header-anchor">#</a> 生成模型的物理模型</h2> <p>从本质看，我们获得一批样本，如果能够直接通过此样本求解出其对应的概率分布，那么，最简单的办法就可以采取蒙特卡洛抽样法，从这个概率分布中抽样，实现生成新样本。</p> <p>可惜的是，一般我们无法求解出样本本身对应的概率分布。即使我们知道了样本的概率分布，这个分布可能会非常复杂，如何从这样的分布中高效采样也是个难题。
+那么，研究人员就希望把这个问题进行转换：
+P(X)===&gt;Q(Y)
+其中Q是相对简单的，一般都采取的是正态分布。
+这样，整个问题就转化为如何将原始的数据分布转化成标准的概率分布，然后在将此正态分布生成原始的分布问题。</p> <p>P(X)===&gt;Q(Y)====&gt;P(X)</p> <p>2015年，作者基于其物理学背景，借鉴物理学中的掺杂与去杂过程，引入到生成领域。
+这样，在技术上，我们逐步向一幅图中添加噪声，逐步叠加后，最终此图像就变成完全随机的一幅图。然后，从完全随机的一幅图中，按照某种策略，逐步去除噪声，就可以还原出图像。</p> <p>这种基于物理思维的实验驱动的模式，也引发AI领域新的研究模式：</p> <ul><li>通过建立物理模型，构建可解释的过程</li> <li>在此基础上引入数学物理框架，形成新型算法
+这也是为什么扩散模型获得如此众多研究者的喜好原因之一。</li></ul> <h2 id="物理驱动生成统一框架"><a href="#物理驱动生成统一框架" class="header-anchor">#</a> 物理驱动生成统一框架</h2> <p>正是基于上述的发现与实际验证，在扩散生成领域中，已经出现一系列的成果，下面简单概述一下：</p> <ul><li>YangSong从随机过程角度(布朗运动)，首次为扩散模型建立了扎实的数学物理基础</li> <li>XXX则借助最优化传输理论，通过流体力学理论，构建出新型的密度流流体力学框架</li> <li>XXX从静电学角度，为扩散模型建立静电力学的物理模型</li></ul> <p>更加激进的是MIT的XXX小组，则从更加广泛的视角，提出PhyGen概念，重新数理物理学经典模型如何驱动生成。</p> <p>下面我们概述此项目</p> <h2 id="genphy"><a href="#genphy" class="header-anchor">#</a> GenPhy</h2></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/genmo/assets/js/app.26c693c1.js" defer></script><script src="/genmo/assets/js/2.778bb4ad.js" defer></script><script src="/genmo/assets/js/1.50b457b8.js" defer></script><script src="/genmo/assets/js/40.5f3de182.js" defer></script>
+  </body>
+</html>
